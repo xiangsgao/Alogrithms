@@ -1,7 +1,12 @@
 package com.gao;
 
-
-import java.util.*;
+import com.gao.basic_alogrithms.SortedArray;
+import com.gao.leet_code.AddTwoNumbers;
+import com.gao.leet_code.LongestSubstringWithoutRepeatingCharacters;
+import com.gao.leet_code.TwoSum;
+import com.gao.pramp.DeletionDistance;
+import com.gao.pramp.SmallestSubstring;
+import com.gao.pramp.TimePlanner;
 
 public class Main {
 
@@ -9,17 +14,19 @@ public class Main {
         for(String element: args){
             System.out.println(element);
         }
-        HashSet<Character> map = new HashSet<>();
-        Queue<Integer> q = new LinkedList<>();
+        System.out.println("SortedArray:");
         SortedArray.run();
+        System.out.println("SmallestSubstring:");
         SmallestSubstring.run();
+        System.out.println("TimePlanner:");
         TimePlanner.run();
-        SumOfTwo.run();
-        DynamicProgramming.run();
+        System.out.println("TwoSum:");
+        TwoSum.run();
+        System.out.println("DeletionDistance:");
+        DeletionDistance.run();
+        System.out.println("AddTwoNumbers:");
+        AddTwoNumbers.run();
+        System.out.println("LongestSubstringWithoutRepeatingCharacters:");
+        LongestSubstringWithoutRepeatingCharacters.run();
     }
-
-
-
-
-
 }

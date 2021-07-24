@@ -1,6 +1,6 @@
-package com.gao;
+package com.gao.pramp;
 
-public class DynamicProgramming {
+public class DeletionDistance {
 
 
     public static void run(){

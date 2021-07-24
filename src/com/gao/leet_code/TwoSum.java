@@ -1,11 +1,11 @@
-package com.gao;
+package com.gao.leet_code;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class SumOfTwo {
+public class TwoSum {
 
-    /*
+    /**
      *  Merging 2 Packages
         Given a package with a weight limit limit and an array arr of item weights,
         implement a function getIndicesOfItemWeights that finds two items whose sum of weights equals the weight limit limit.
@@ -24,7 +24,7 @@ public class SumOfTwo {
 
     static int[] getIndicesOfItemWeights(int[] arr, int limit){
         HashMap<Integer, Integer> map = new HashMap<>();
-
+        // use hashmap to cut down the brute force
         for(int i = 0; i < arr.length; i++){
             int complement = limit - arr[i];
             if(map.containsKey(complement)){

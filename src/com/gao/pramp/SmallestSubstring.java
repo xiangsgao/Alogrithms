@@ -1,9 +1,6 @@
-package com.gao;
+package com.gao.pramp;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 public class SmallestSubstring {
 
