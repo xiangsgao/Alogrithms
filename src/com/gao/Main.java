@@ -3,6 +3,7 @@ package com.gao;
 import com.gao.basic_alogrithms.SortedArray;
 import com.gao.leet_code.AddTwoNumbers;
 import com.gao.leet_code.LongestSubstringWithoutRepeatingCharacters;
+import com.gao.leet_code.MedianOfTwoSortedArrays;
 import com.gao.leet_code.TwoSum;
 import com.gao.pramp.DeletionDistance;
 import com.gao.pramp.SmallestSubstring;
@@ -28,5 +29,7 @@ public class Main {
         AddTwoNumbers.run();
         System.out.println("LongestSubstringWithoutRepeatingCharacters:");
         LongestSubstringWithoutRepeatingCharacters.run();
+        System.out.println("MedianOfTwoSortedArrays:");
+        MedianOfTwoSortedArrays.run();
     }
 }

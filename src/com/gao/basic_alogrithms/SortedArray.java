@@ -96,7 +96,7 @@ public class SortedArray {
 
     // helper for merge
     public static int[] merge(int[] a, int[] b){
-        List<Integer> c = new ArrayList<Integer>();
+        List<Integer> c = new ArrayList<>();
 
         int aIndex = 0;
         int bIndex = 0;

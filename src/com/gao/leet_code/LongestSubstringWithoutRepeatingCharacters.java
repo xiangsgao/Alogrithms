@@ -12,6 +12,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     /**
      * Given a string s, find the length of the longest substring without repeating characters.
+     *
+     * https://leetcode.com/problems/longest-substring-without-repeating-characters/
      */
 
     public static int lengthOfLongestSubstring(String s) {
@@ -21,7 +23,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
         if(charArray.length == 1) return 1;
         if(charArray.length == 2) return (charArray[0] == charArray[1]) ? 1 : 2;
 
-        // need to use the sliding windows technique
+        // need to use the sliding windows technique, bad implementation for my solution
+        // watch this for the most optimal solution
+        // https://www.youtube.com/watch?v=3IETreEybaA
         int longest = 1;
         int currentLongest = longest;
         List<Character> array = new ArrayList<>();
