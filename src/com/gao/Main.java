@@ -1,10 +1,7 @@
 package com.gao;
 
 import com.gao.basic_alogrithms.SortedArray;
-import com.gao.leet_code.AddTwoNumbers;
-import com.gao.leet_code.LongestSubstringWithoutRepeatingCharacters;
-import com.gao.leet_code.MedianOfTwoSortedArrays;
-import com.gao.leet_code.TwoSum;
+import com.gao.leet_code.*;
 import com.gao.pramp.DeletionDistance;
 import com.gao.pramp.SmallestSubstring;
 import com.gao.pramp.TimePlanner;
@@ -31,5 +28,9 @@ public class Main {
         LongestSubstringWithoutRepeatingCharacters.run();
         System.out.println("MedianOfTwoSortedArrays:");
         MedianOfTwoSortedArrays.run();
+        System.out.println("MaxiumNumberOfBallons");
+        MaxiumNumberOfBallons.run();
+        System.out.println("ReverseOnlyLetters");
+        ReverseOnlyLetters.run();
     }
 }
