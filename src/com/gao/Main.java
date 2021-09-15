@@ -32,5 +32,7 @@ public class Main {
         MaxiumNumberOfBallons.run();
         System.out.println("ReverseOnlyLetters");
         ReverseOnlyLetters.run();
+        System.out.println("LongestTurbulentSubarray");
+        LongestTurbulentSubarray.run();
     }
 }
