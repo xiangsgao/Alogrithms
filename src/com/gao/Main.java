@@ -34,5 +34,7 @@ public class Main {
         ReverseOnlyLetters.run();
         System.out.println("LongestTurbulentSubarray");
         LongestTurbulentSubarray.run();
+        System.out.println("ValidParenthesis");
+        ValidParentheses.run();
     }
 }
