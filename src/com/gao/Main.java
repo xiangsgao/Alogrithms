@@ -36,5 +36,9 @@ public class Main {
         LongestTurbulentSubarray.run();
         System.out.println("ValidParenthesis");
         ValidParentheses.run();
+        System.out.println("PalindromeNumber");
+        PalindromeNumber.run();
+        System.out.println("MergeTwoSortedLists");
+        MergeTwoSortedLists.run();
     }
 }
