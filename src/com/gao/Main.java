@@ -40,5 +40,7 @@ public class Main {
         PalindromeNumber.run();
         System.out.println("MergeTwoSortedLists");
         MergeTwoSortedLists.run();
+        System.out.println("RemoveDuplicateNums");
+        RemoveDuplicateNums.run();
     }
 }
