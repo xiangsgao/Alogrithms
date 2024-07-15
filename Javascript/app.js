@@ -2,7 +2,7 @@ const snapchatSolution = require("./src/snapchat");
 
 
 const main = () =>{
-  snapchatSolution();
+  console.log(snapchatSolution());
 }
 
 module.exports = main;

@@ -25,9 +25,9 @@ const testData = [
     [4, 8, "Manager2"],
     [3, 4, "Employee2"],
     [2, 3, "Intern2"],
-    [1, 3, "intern3"],
+    [1, 3, "Intern3"],
     [0, 4, "Employee3"],
-    [-1, 8, "CEO's Wife"]
+    [-1, 8, "CEO's Assistant"]
 ]
 
 const createMapEntry = (data, map) =>{
@@ -75,8 +75,26 @@ const solution = () =>{
     });
 
 
-    const dfs = (id = ceoId) =>{
-        return ""
+    const dfs = (id = ceoId, level = 0) =>{
+        const val = map.get(id);
+        const subordinates = val.subordinates;
+        if(subordinates.size === 0){
+           return "\t".repeat(level) + val.name;
+        }
+
+        const subordinatesString = [];
+        for(const subId of subordinates){
+            subordinatesString.push(dfs(subId, level + 1))
+        }
+        const tabs =  "\t".repeat(level);
+        let retval =  `
+            ${tabs + val.name}
+                ${subordinatesString.join("\n" + "\t".repeat(level))}
+            ${tabs + val.name}
+        `;
+
+        return retval;
+
     }
 
     return dfs();
