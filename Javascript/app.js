@@ -1,6 +1,8 @@
+const snapchatSolution = require("./src/snapchat");
+
 
 const main = () =>{
-  console.log("Hello World!");
+  snapchatSolution();
 }
 
 module.exports = main;

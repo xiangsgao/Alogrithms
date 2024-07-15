@@ -16,6 +16,7 @@
  * CEO
  */
 
+// [employeeId, managerId, name]
 const testData = [
     [8, 8, "CEO"],
     [7, 8, "Manager1"],
@@ -29,11 +30,56 @@ const testData = [
     [-1, 8, "CEO's Wife"]
 ]
 
+const createMapEntry = (data, map) =>{
+    const [id, managerId, name] = data;
+    const val = {
+        managerId, name, subordinates: new Set()
+    };
+    map.set(id, val);
+    return map.get(id);
+}
 
 const solution = () =>{
-    // first need to construct a map with key = employee id, and value = { managerId, name, subordinates }
+    // first need to construct a map with key = employee id, and value = { managerId, name, subordinates: set of employeeIds }
     const map = new Map();
 
+    for(const data of testData){
+        const [id, managerId] = data;
+        createMapEntry(data, map);
+        if(id !== managerId){
+            const manager = map.get(managerId) ?? createMapEntry(testData.find(([id]) => id === managerId ), map);
+            manager.subordinates.add(id);
+        }
+    }
+
+    /**
+     * map looks like this
+     *  {
+     *   8 => { managerId: 8, name: 'CEO', subordinates: Set(3) { 7, 4, -1 } },
+     *   7 => { managerId: 8, name: 'Manager1', subordinates: Set(1) { 6 } },
+     *   6 => { managerId: 7, name: 'Employee1', subordinates: Set(1) { 5 } },
+     *   5 => { managerId: 6, name: 'Intern1', subordinates: Set(0) {} },
+     *   4 => { managerId: 8, name: 'Manager2', subordinates: Set(2) { 3, 0 } },
+     *   3 => { managerId: 4, name: 'Employee2', subordinates: Set(2) { 2, 1 } },
+     *   2 => { managerId: 3, name: 'Intern2', subordinates: Set(0) {} },
+     *   1 => { managerId: 3, name: 'intern3', subordinates: Set(0) {} },
+     *   0 => { managerId: 4, name: 'Employee3', subordinates: Set(0) {} },
+     *   -1 => { managerId: 8, name: "CEO's Wife", subordinates: Set(0) {} }
+     * }
+     */
+
+    // now dfs to get the console out string, starting from the CEO. CEO is the ceo if the employee id and the manager id are the same
+    const ceoId = [...map.keys()].find((key) =>{
+        const {managerId} = map.get(key);
+        return key === managerId;
+    });
+
+
+    const dfs = (id = ceoId) =>{
+        return ""
+    }
+
+    return dfs();
 }
 
 module.exports = solution;
