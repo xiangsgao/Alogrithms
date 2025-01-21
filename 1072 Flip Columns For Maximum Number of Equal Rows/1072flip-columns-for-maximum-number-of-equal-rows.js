@@ -15,7 +15,6 @@ var maxEqualRowsAfterFlips = function(matrix) {
     count.set(rowKey, (count.get(rowKey) ?? 0 ) + 1);
    }
 
-  
 
    return Math.max(...count.values());
 
