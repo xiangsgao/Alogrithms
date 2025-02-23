@@ -12,7 +12,7 @@
  *          Employee2
  *          Employee3
  *      Manager2
- *      CEO's Wife
+ *      CEO's Assistant
  * CEO
  */
 
