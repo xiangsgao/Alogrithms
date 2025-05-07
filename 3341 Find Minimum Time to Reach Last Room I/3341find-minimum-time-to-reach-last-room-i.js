@@ -6,9 +6,9 @@ var minTimeToReach = function(moveTime) {
     const N = moveTime.length;
     const M = moveTime[0].length;
 
-    const queue = new PriorityQueue({
-        compare: ([d1], [d2]) => d1 - d2 
-    });
+    const queue = new PriorityQueue(
+        ([d1], [d2]) => d1 - d2 
+    );
 
     const best = Array(N).fill().map(() => Array(M).fill(Infinity));
     best[0][0] = 0;
@@ -48,12 +48,3 @@ var minTimeToReach = function(moveTime) {
 
     return best[N - 1][M - 1];
 };
-
-
-/***
-
-[
-     [0,0,0],
-     [0,0,0]
-]
-***/
