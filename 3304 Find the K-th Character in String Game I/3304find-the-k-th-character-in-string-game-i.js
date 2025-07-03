@@ -3,7 +3,7 @@
  * @return {character}
  */
 var kthCharacter = function(k) {
-    const map = {};
+        const map = {};
     const letters = "abcdefghijklmnopqrstuvwxyz";
     for(let i = 0; i < letters.length; i++){
         map[letters[i]] = letters[i + 1] ?? letters[0];
@@ -17,5 +17,4 @@ var kthCharacter = function(k) {
     }
 
     return s[k -1];
-
 };
