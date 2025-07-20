@@ -6,8 +6,7 @@ var countPalindromicSubsequence = function(s) {
     
     //  O N^2
 
-
-    const res = new Set();
+    const res = new Set(); 
     let retval = 0;
     for(let i = 0; i < s.length; i++){
         const firstC = s[i];
