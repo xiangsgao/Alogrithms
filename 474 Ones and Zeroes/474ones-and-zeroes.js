@@ -4,6 +4,7 @@
  * @param {number} n
  * @return {number}
  */
+ // i did a bactacking solution to brute force all the possible subsets
 var findMaxForm = function(strs, m, n) {
      
      const count = strs.map(e =>{
